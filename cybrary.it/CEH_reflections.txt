@@ -1,0 +1,44 @@
+//Is an interactive tool. 
+nslookup 
+
+//has a help option if you need to look some stuff up:
+help
+
+type=x/// it's handy dandy record type investigator..
+(
+A, // host name resolution
+AAAA,
+A+AAAA,
+ANY,// means all of them
+CNAME,//if you have an alias
+MX, // mail server
+NS, //who are the name servers
+PTR,// oposite of an a record
+SOA, //Start of authority
+SRV, //internal dns 
+
+--------------------------
+first investigating the (ip):
+
+//Step 1.
+>>>>>>>>>>>>>>>>>>>>>>>>>
+Taking a different approach to check the name server
+>>>>>>>>>>>>>>>>>>>>>>>>>
+
+setype=MX
+> www.gravymobiledevelopment.com
+Server:  dns-cac-lb-01.rr.com
+Address:  209.18.47.61
+
+Non-authoritative answer:
+www.gravymobiledevelopment.com  canonical name = gravymobiledevelopment.com
+gravymobiledevelopment.com      MX preference = 0, mail exchanger = gravymobiled
+evelopment.com
+>
+
+C:\>nslookup www.gravymobiledevelopment.com >> file.txt
+Non-authoritative answer:
+
+C:\>notepad file.txt
+
+C:\>
