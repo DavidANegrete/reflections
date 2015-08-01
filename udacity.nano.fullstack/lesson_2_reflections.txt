@@ -1,3 +1,6 @@
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 The staging area is different from the working directory because it is where the data is saved before if is updated on the directory and the repository is the actual place where the active files are. 
+
+BRANCHES
+the master branch - : tip of the branch git c

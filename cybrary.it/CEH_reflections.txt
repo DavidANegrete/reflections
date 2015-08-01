@@ -20,7 +20,7 @@ SRV, //internal dns
 --------------------------
 first investigating the (ip):
 
-//Step 1.
+
 >>>>>>>>>>>>>>>>>>>>>>>>>
 Taking a different approach to check the name server
 >>>>>>>>>>>>>>>>>>>>>>>>>
@@ -42,3 +42,23 @@ Non-authoritative answer:
 C:\>notepad file.txt
 
 C:\>
+
+___________________________
+Pro Tip
+___________________________
+
+When gathering results use >> to push your results to a text file. It will be easier to 
+keep track and write down the information by appending
+
+ex. nsllookup www.gravymobiledevelopment.com >> file.txt
+
+
+C:\>notepad file.txt
+
+Server:  dns-cac-lb-01.rr.com
+Address:  209.18.47.61
+
+Name:    gravymobiledevelopment.com
+Address:  174.136.12.119
+Aliases:  www.gravymobiledevelopment.com
+
