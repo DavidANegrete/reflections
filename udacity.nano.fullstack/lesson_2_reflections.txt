@@ -4,3 +4,7 @@ The staging area is different from the working directory because it is where the
 
 BRANCHES
 the master branch - : tip of the branch git c
+
+Q : What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A: When you want to add some new features but later want to merge them together cause they may or may not work. for testing purposes. 
+
