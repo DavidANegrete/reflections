@@ -1,6 +1,6 @@
 # reflections
-This repo is a colections of notes I have made in order to comeback and review. Here a I chronicle my exploration of coding, hacking, 
-having fun and learning.
+This repo is a colections of notes I have made in order to comeback and review. You will find notes on stuff I have learned about coding, hacking and development.
+
 
 __FILES INCLUDED__.(thisRepo)
 
