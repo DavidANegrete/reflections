@@ -1,0 +1,2 @@
+Q: When would you want to use a remote repository rather than keeping all your work local?
+A: When you are ready for the world to see it. 
