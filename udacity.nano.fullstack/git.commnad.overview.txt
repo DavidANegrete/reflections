@@ -33,3 +33,14 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/DavidANegrete/reflections.git
 git push -u origin master
+
+git remote --v 
+
+ Will allow you to see where you are pushin and fetching from.  
+
+  example:
+
+  	origin  https://github.com/DavidANegrete/recipes.git (fetch)
+	origin  https://github.com/DavidANegrete/recipes.git (push)
+
+git fetch - get any changes 

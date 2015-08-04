@@ -2,9 +2,24 @@ How is the staging area different from the working directory and the repository?
 
 The staging area is different from the working directory because it is where the data is saved before if is updated on the directory and the repository is the actual place where the active files are. 
 
-BRANCHES
+BRANCHES-----------------------
 the master branch - : tip of the branch git c
+-------------------------------
 
 Q : What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 A: When you want to add some new features but later want to merge them together cause they may or may not work. for testing purposes. 
 
+Q : How do the diagrams help you visualize the branch structure?
+A : They offer a visual representation of the branches and the parent brach so you can see what relationships exist. 
+
+MERGING FILES------------------
+git show (show the commits in comparison to the parents)
+git branch -d <branch_name> (deletes the branch you want gone)
+-------------------------------
+
+Q : What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+A : When you merge to branches they are still able to connect to the parent commit however it is a new head. 
+
+Q : What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+A : The pros are that you have more control and can determine if a change should be applied or not
+  : if the changes were auto done then you would find that code would sometimes be more error prone. 
