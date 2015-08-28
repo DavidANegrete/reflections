@@ -1,0 +1,30 @@
+Strings and List are the same thing
+
+ex.
+>>>my_list = [1,2.5,'A']
+
+
+>>>list('hello')
+['h', 'e', 'l', 'l', 'o']
+
+>>>hello_list = list('hello')
+
+>>>'hell' in hello_list 
+True
+
+>>> words = 'Go get that thing and make it happen'
+>>> words.split()
+
+['Go', 'get', 'that', 'thing', 'and', 'make', 'it', 'happen']
+>>>
+>>> '+'.join(words.split())
+'Go+get+that+thing+and+make+it+happen'
+
+deleting from a list
+a_list[1,2,3] 
+
+del a_list[2] :: 2=index, removing it based on the index
+[1,2]
+
+a_list.remove(1) :: remove removes the first instance of a variable
+[2]
