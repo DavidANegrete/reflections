@@ -1,30 +1,79 @@
-Strings and List are the same thing
 
-ex.
+#Strings and List are the same thing
+# List are needed to store data in groups
+# naw mean
+
+#get the number of chars with len()
+
+itterable = "itterable"
+>>>len(itterable)
+>>>9
+
 >>>my_list = [1,2.5,'A']
-
-
 >>>list('hello')
 ['h', 'e', 'l', 'l', 'o']
 
 >>>hello_list = list('hello')
 
+#string validation
 >>>'hell' in hello_list 
 True
+
+# check that string 
+# ;) nahmean
 
 >>> words = 'Go get that thing and make it happen'
 >>> words.split()
 
 ['Go', 'get', 'that', 'thing', 'and', 'make', 'it', 'happen']
+
 >>>
 >>> '+'.join(words.split())
 'Go+get+that+thing+and+make+it+happen'
 
-deleting from a list
-a_list[1,2,3] 
+#deleting from a list
+>>>a_list[1,2,3] 
 
-del a_list[2] :: 2=index, removing it based on the index
+#2=index, removing it based on the index
+>>>del a_list[2] 
 [1,2]
 
-a_list.remove(1) :: remove removes the first instance of a variable
+#remove removes the first instance of a variable
+a_list.remove(1) 
 [2]
+
+#poping will remove from the list
+>>> names = ['David','Darma', 'Booboo']
+>>> names.pop(2)
+'Booboo'
+>>> names
+['David', 'Darma']
+
+#dictionaries
+>>> key_info = {'first':'David', 'last':'Negrete'}
+>>> key_info['last']
+'Negrete'
+>>> key_info['first']
+'David'
+#you can use del 
+
+#values gives back what is held in the dict. 
+
+
+#Dictionary unpacking (a simple project to unpack with details as to what is happening)
+
+def most_classes(teacher_dict):
+  big_num = 0
+  big_teacher = ''
+  
+  #iterating throught the dictionary
+  # vals are ['name':['course1', 'course2', 'soOn..']]
+  for teacher in teacher_dict:
+    #using the teacher key to get the length and store it 
+    class_num = len(teacher_dict[teacher])
+    
+    #first iteration will always happen big_num by default is = 0
+    if (class_num > big_num):
+      big_num = class_num
+      big_teacher = teacher
+  return big_teacher
