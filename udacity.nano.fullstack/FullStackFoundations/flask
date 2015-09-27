@@ -1,0 +1,14 @@
+HTML///
+Templates can be used and created as follow
+1. make a folder called templates in the same folder as the flask app
+2. in the method add the render_template('name.html', pass in the variables, variables)
+
+By defaurlt a route in flask only responds to get requests. 
+
+
+Steps to fix a bug in your code: 
+	1. Find what the error log says.
+	2. look at the line of code and ask yourself what does it return.
+	3. trace back the return value to the source or the next object and repeat. 
+
+	

@@ -1,0 +1,15 @@
+The goal is to steamline the development process by insuring that there is always a working prototype available. 
+
+Steps to Complete
+1. Mock Ups
+	- Create pages HTML for each page and URLs
+2. Routing
+	-	Set up routing to insure that the pages can be accessed even if not complete (HTML)
+3. Templates and Forms
+	-	On this iteration all templates and forms will be created
+4. CRUD (Functionality)
+	-	Make sure the DB can be accessed. 
+5. API Endpoints
+	- 	Create JSON implementations if requested.
+6. Styling and Flash
+	-	This is focused on delivering a cleaned up and UX focused application. 

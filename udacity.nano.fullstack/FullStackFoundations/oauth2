@@ -1,0 +1,25 @@
+Oauth Flows:
+- client, server and OAuth2
+
+ -- authorization can happen on the client side. 
+ -- also supported on mobile
+
+ -- client side authentication happens on behalf of the user/clien and is easy. A lot of trust is placed on the user and server can not make API calls on behalf of the user. Server side authentication is dependent of securing the sessions on the server. The best flow depends on the needs of the app. 
+
+ Learn more: https://aaronparecki.com/articles/2012/07/29/1/oauth2-simplified
+
+ Settimg up oath flow:
+ 1. got to console.developers.com
+ 2. Click API & Auth and select credentials
+ 3. Follow the steps, complete type, name etc.
+ 4. Forward the port to the port it will authenticate (Authorized JavaScript origins)
+
+ Ready to roll, add imports to the file that will be authenticated.
+ 	from flask import session as login_session
+ 	import random, string
+
+ Create a state key to prevent unauthorized access (cross site request forgery) so only the cline browswer can access the login even if the key is taken. 
+
+CallBack
+
+
