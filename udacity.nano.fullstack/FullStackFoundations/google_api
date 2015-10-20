@@ -1,0 +1,4 @@
+To check if the api is working correctly(check the back end):
+'''
+_ah/api/discovery/v1/apis
+'''

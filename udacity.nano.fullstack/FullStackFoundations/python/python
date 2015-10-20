@@ -60,14 +60,14 @@ a_list.remove(1)
 #values gives back what is held in the dict. 
 
 
-#Dictionary unpacking (a simple project to unpack with details as to what is happening)
+#Dictionary unpacking (a simple project to unpack with details on what is happening)
 
 def most_classes(teacher_dict):
   big_num = 0
   big_teacher = ''
   
   #iterating throught the dictionary
-  # vals are ['name':['course1', 'course2', 'soOn..']]
+  # vals are ['name':['course1', 'course2', 'so On..']]
   for teacher in teacher_dict:
     #using the teacher key to get the length and store it 
     class_num = len(teacher_dict[teacher])
@@ -77,3 +77,7 @@ def most_classes(teacher_dict):
       big_num = class_num
       big_teacher = teacher
   return big_teacher
+
+
+  Wrappers- 
+  wrappers allow you to wrap a fuction with another function to make it execute before the one getting called. This is great for verifying login information. 

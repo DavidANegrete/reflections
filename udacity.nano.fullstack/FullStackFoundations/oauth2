@@ -9,7 +9,10 @@ Oauth Flows:
  Learn more: https://aaronparecki.com/articles/2012/07/29/1/oauth2-simplified
 
  Settimg up oath flow:
- 1. got to console.developers.com
+ 1. go to console.developers.com
+ 	- set up the app and the services.
+ 	- forward the port for the app to work.
+
  2. Click API & Auth and select credentials
  3. Follow the steps, complete type, name etc.
  4. Forward the port to the port it will authenticate (Authorized JavaScript origins)
@@ -22,4 +25,10 @@ Oauth Flows:
 
 CallBack
 
+The flow the user has: Hybrid-Oauth Flow
+- user goes to app 
+- given option to sign in with oauth provider (google, facebook etc)
+- user authorizes the application (Client side with js)
+- the oauth provider sends a one time code (oauth key) and access code generated to the server and then they are relayed back to the provider the server then gets a certificate to make api calls. The perks of securing sites this way are that you will not have to do it yourself and recovery of fogoten will be done by the provider.
 
+Keeping it a Secrete

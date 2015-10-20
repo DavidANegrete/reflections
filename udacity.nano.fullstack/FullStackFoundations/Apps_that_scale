@@ -1,0 +1,13 @@
+Application architecture will determine how effectice your app is and how effective it is when handling requests(querys, redirects etc).
+
+What if you get many requests and demands on the app?
+
+-OPTION 1_(Infrastructure as a service)
+	Run the apps code on mamy computers. 
+	Decouple the app.(Share Nothing Architecture)
+
+-Option 2_(Platform as a service)
+	There are many providers (Engine yard, Red Hat OpenShift,
+	Google App Engine, Appfog, Windows Azure)
+		Each is different and vary on cost and 
+		languages used. 
