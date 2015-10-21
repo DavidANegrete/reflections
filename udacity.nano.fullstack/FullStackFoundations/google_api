@@ -1,4 +1,76 @@
 To check if the api is working correctly(check the back end):
-'''
-_ah/api/discovery/v1/apis
-'''
+
+''' _ah/api/discovery/v1/apis '''
+
+Where is the DB? (Data is stored in datastore.)
+	- runs on the cloud
+	- key value clolumn oriented
+	- scale apps to the level of google
+
+When doing datastore modeling here are the building blocks
+-kind(similar to class in OOP)
+	profile(name, tshirt size)
+	confrence(name, start date, end date, location)
+-entity(similar to objects)
+	profile(name: 'David', tshirtsize:'large')
+	confrence(name:'cooking it up', startdate: 'aug 15', enddate:'aug 16', city:'el paso')
+-property
+	properties are the date held within
+
+--Example--
+		from google.appengine.ext import ndb
+
+		class Recipe(ndb.Model):
+			name = ndb.StringProperty()
+			ingredients = ndb.StringProperty(repeated=True)
+			instructions = ndb.TextProperty()
+			vegetarian = ndb.BooleanPropert()
+			servings = ndb.IntegerProperty()
+
+--Granting Access (endpoints)--
+
+Giving access to the application to use the endpoint API:
+you can use two client id's to grant access to multiple apps. 
+
+---Data Relationships---
+
+ancestor (creater)
+	1. Assign at creation
+	2. Can never be changed 
+	(much like a foriegn key)
+
+has-a (attender)
+
+How is an relationship created
+
+# Confrence (create the relationship on creation)
+c_key = ndb.Key(Conference, c_id, parent = p_key)
+
+---Types of queries---
+	*proto rpc message classes for the req and response 
+	
+query by kind, searches all entities
+	
+	note: q is a query object and not the result
+		q = Confrence.query()
+
+		Example querys: 
+			q.get() # one result
+			q.fetch() # all results
+			q.fetch(5) # the first 5
+
+		A loop can be used
+			for results in q:
+				result.name 
+				.etc
+
+		Applying an ordering
+			q.order(Confrence.name)
+
+		Applying a filter (all in feb)
+			q.filter(Conference.month == 2)
+			(ending with query all on the app)
+
+query by kind filtered by the ancestor
+
+query by kind filter by property
