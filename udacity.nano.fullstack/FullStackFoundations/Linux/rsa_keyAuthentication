@@ -1,0 +1,43 @@
+Overview:
+
+A message is sent from the server to the client, it is sent back encrypted to the server it gets decrypted with the public key if it matches authentication is granted, else it aint.
+
+----IMPORTANT----
+(Keys must be generated from the the local enviorment to stay private not the server)
+
+from bash(localy):
+	
+	1. ssh-keygen (use this app to create the key)
+		-	~/.ssh/<file_to_save_key_in> (enter where the key should be saved locally)
+	
+	2. cat .ssh/<file_to_save_key_in>.pub (copy the public key)
+
+from the client
+	
+	1. mkdir .ssh (create the .ssh directory)
+
+	2. touch .ssh/authorized_keys (make the file)
+
+	3. chmod 700 .ssh (protect from modifications)
+
+	4. chmod 644 .ssh/authorized_keys (protect from modifications)
+
+forcing Key based authentication (from super user)
+	
+	1. sudo nano /etc/ssh/sshd_config (sshd_config listens for all ssh requests)
+
+	2. change PasswordAuthentication no (ensures RSA only)
+
+	3. sudo service ssh restart (using this cause sshd is only listening at the start)
+
+
+
+
+
+now to log in, a user can use:
+
+	ssh student@127.0.0.1 -p 2222 -i ~/.ssh/<file_to_save_key_in>
+	
+		-i: (identity file flag)
+	
+		~/.ssh/<file_to_save_key_in>: where the key is saved

@@ -1,0 +1,20 @@
+ufw 
+
+Checking the status:
+sudo ufw status (gives the status of the firewall)
+
+Setting up:
+	Incoming traffic:
+		sudo ufw default deny incoming
+
+	Outgoing traffic:
+		sudo ufw default allow outgoing
+
+	Allowing SSH:
+		sudo ufw allow 2222/tcp (2222 is being set up since Vagrant used 2222 as the default ssh port)
+
+	Allowing HTTP:
+		sudo ufw allow www
+
+Enabling the Firewall
+	sudo ufw enable

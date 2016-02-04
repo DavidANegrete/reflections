@@ -1,0 +1,37 @@
+
+Looking down the permissions you will see that they either start with 
+
+(d) stands for a directory
+(-) stands for a file
+
+the next nine spaces indicate the persmissions granter for a owner, group and everyone
+
+The options they have are: 
+r (octal val 4)= read 
+w (octal val 2)= write
+x (octal val 1)= execute
+none 0 
+
+
+
+student@vagrant-ubuntu-trusty-64:~$ ls -al
+total 32
+drwxr-xr-x 4 student student 4096 Jan  4 06:33 .
+drwxr-xr-x 5 root    root    4096 Jan  4 04:35 ..
+-rw------- 1 student student  501 Jan  5 05:08 .bash_history
+-rw-r--r-- 1 student student  220 Jan  4 04:35 .bash_logout
+-rw-r--r-- 1 student student 3637 Jan  4 04:35 .bashrc
+drwx------ 2 student student 4096 Jan  4 05:04 .cache
+-rw-r--r-- 1 student student  675 Jan  4 04:35 .profile
+drwx------ 2 student student 4096 Jan  4 06:43 .ssh 
+
+
+chown
+	changes the files owner
+		sudo chown root .bash_history
+
+
+
+chgrp
+	changes the files group permissios
+		sudo chgrp root .bash_history

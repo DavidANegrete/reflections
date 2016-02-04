@@ -1,0 +1,26 @@
+'''User management:'''
+	
+Adding a User:
+	Command:
+		sudo adduser <user_name>
+
+Confirming is easy use the finger command:
+	Command:
+		finger <user_name>
+
+Connecting from terminal to the VM as a user:
+	Command:
+		ssh <user_name>@127.0.0.1 -p 2222
+
+			Breakdowm:
+				[<user_name>@127.0.0.1]: who at what ip is attemtping to ssh
+				[-p 2222]: from what port will the connection be
+
+Granting Super User Permession to users from the Vagrant Terminal:
+	Root Access to users is within [/etc/sudoers.d] within the Virtual Machine
+
+	1. sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student (making a copy)
+	2. sudo nano /etc/sudoers.d/student (edit)
+
+Expiring password:
+sudo passwd -e <user_name>
