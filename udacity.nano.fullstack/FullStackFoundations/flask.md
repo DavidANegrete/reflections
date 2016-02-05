@@ -8,9 +8,7 @@ Here are the notes used to refine my understanding of the Flask framework.
 ## Views
 Views are created when they have routes. 
 	
-	```
 	@app.route('/')
-	```
 
 ---
 ## Passing and using Data 
