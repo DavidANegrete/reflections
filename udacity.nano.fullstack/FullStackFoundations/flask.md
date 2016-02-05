@@ -23,7 +23,7 @@ to include POST and GET is used.
 
 It is like a dictionary
 
-	### Passing variables
+	#### Passing variables
 
 	Variables are then passed using the query string.
 	
@@ -31,7 +31,7 @@ It is like a dictionary
 	def index(name="Your Name"):
 	
 
-	### Getting values from the request object
+	#### Getting values from the request object
 	
 	To get access to the args values in the abouve example. 
 
@@ -39,7 +39,7 @@ It is like a dictionary
 		name = request.args.get('name', name)
 		
 		
-	### Passing values with a clean URL
+	#### Passing values with a clean URL
 
 		Any variables passed named 'name' or just the standard index view is 
 		called below. A type can be indicated by appending the type 
@@ -85,7 +85,7 @@ It is like a dictionary
 	return render_template("example.html")
 	
 
-	### Passing data to the view 
+	#### Passing data to the view 
 	To get at the values and pass them to a template Flask uses Jinja2, it
 	uses {{ }} to access the variables when rendered.
 
@@ -106,7 +106,7 @@ It is like a dictionary
 	return render_template("example.html", **context)
 	
 
-	### Template Inheritance
+	#### Template Inheritance
 	Becuase you can inherit templates with Flask using inheritance helps to 
 	keep the code 'DRY'
 
