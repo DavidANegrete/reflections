@@ -1,0 +1,78 @@
+## Declaring a class
+Python 2.7 <
+	class Monster(object):
+Python 2.7 >
+	class Monster:
+
+	...
+	score = 1
+	name = "chupas"
+
+Notice that the inheritance is not declared.
+
+## Declaring an instance of the class Monster
+	chup = Monster()
+
+## Functions that belong to classes AKA methods
+	
+	# to add points to the score and display
+	def score(self):
+		+= self.score
+		return self.score
+
+dunder init (__init__)
+This is a method that insures that when an instance is created certain attributes
+are included upon the creation.
+
+	def __(init)__(self, score = 1, name = "chupas"):
+		self.score
+		self.name
+
+The above example works fine but the value must be inlcluded or it will error a
+better option is to use dictionary unpacking (**kwargs) 
+
+	def __(init)__(self, **kwargs):
+		# notice the default is specified, it is 1
+		self.score = kwargs.get('score', 1)
+		self.name = kwargs.get('name', "chupas")
+
+In the class you can still add values for the monster
+
+class Monster(object):
+	weapon = 'sword'
+	# etc
+	def __(init)__(self, **kwargs):
+		# notice the default is specified, it is 1
+		self.score = kwargs.get('score', 1)
+		self.name = kwargs.get('name', "chupas")
+
+		# this essentially says anything passed in can overiden
+		for key, value in kwargs.items():
+			setattr(self, key, value)
+
+When the instance is created more attributes can be passed. 
+
+The monster class can be coppied like so..
+	
+	from monster import Monster
+
+	class Goblin(Monster)
+
+dunder str (__str__) is used when a method is converted to a string
+
+from character import Character
+
+
+class Warrior(Character):
+  weapon = 'sword'
+  
+  def rage(self):
+    self.attack_limit = 20
+    
+    def __str__(self):
+      return "Warrior, {}, {}".format(self.weapon, self.attack_limit)  
+
+
+
+
+

@@ -203,18 +203,28 @@ to do just that.
 Wihin a called method you can return a response like so:
 
 	def save():
+		# Faking the response to create a cookie
 		response = make_response(redirect(url_for('index.html')))
-		# bc request.form is an immutable dict
-				response.set_cookie('whatever', json.dumps(dict(request.form.items()))
+
+		# Attempting to get saved data
+		data = get_saved_data()
+
+		#
+		data.update(dict(request.form.items()))
+		# request.form is an immutable dict that is why it is casted
+		response.set_cookie('whatever', json.dumps(dict(request.form.items()))
+		return response
 
 
-Now say you want to save form information into jason. you could do it like so.
+Now say you want to save form information into json. you could do it like so.
 	
 	...
 	def get_saved_data():
 		try:
-			# turning data into Python code once more
+			# turning data into Python code once more 
 			data = json.loads(request.cookies.get('whatever'))
+		
+		# Cant turn it into JSON
 		except TypeError:
 			data = {}
 		return data
@@ -228,3 +238,53 @@ To save that data.
 		data.update(dict(request.form.itmes()))
 		response.set_cookie('whatever', json.dumps(dict(data))
 		return response
+
+## Iteratting 
+
+Say you want to itterate through options
+
+	<!--  regular old Python -->
+	{% for category, choices in <thing iterating>.items() %}
+	
+	{% if category != 'name of catergory' %}
+	
+	{{ category.title() }}
+
+
+	{% endif %}
+
+To get information from the response use 
+
+{% if 'name_response'.get('name of thing getting') %}
+{% endif %}
+
+## flash messages
+Flash messages are a way to give users messages as they use an app and they 
+persist so long as the page is not reloaded. 
+
+To use them import flash
+	
+	from flask import flash
+
+Flash messages are kryptographicly signed so a key must be created. 
+
+	app.secret_key = 'some_random_key'
+
+Inside the calling method.
+
+	flash("This is a message!")
+
+On the calling template
+
+	<div class="wrap no_bottom messages"> 
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+			<li>{{ message }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+	</div>
+

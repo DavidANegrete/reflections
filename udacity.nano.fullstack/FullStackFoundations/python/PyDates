@@ -1,0 +1,25 @@
+## Dates and Times in Python
+
+## Importing  
+
+	import datetime
+
+
+## datetime.datetime.now()
+Gives a breakdown of the time.
+	
+	>>> datetime.datetime.now()
+	datetime.datetime(2016, 2, 9, 21, 18, 51, 494859)
+
+## datetime.datetime.replace()
+Gives the option of replacing datetime variables
+
+	timevar = datetime.datetime.now()
+	timevar = timevar.replace(hour=9, second=0, minute=0, second=0, microsecond=0)
+	
+
+## Timedelta	
+
+def delorean(integer):
+	'''Adding additional time to hours'''
+  return starter + datetime.timedelta(hours=integer)

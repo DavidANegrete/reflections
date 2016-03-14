@@ -1,0 +1,48 @@
+## Opening and Closing files
+
+Using reqular expressions allows for us to go into a file and look for patterns
+to do this an option is to fist open the file
+
+	# Opening
+	names_file = open("name_of_file.txt", encoding="utf-8")
+
+	# Reading 
+	data = names_file.read()
+
+	# Close 
+	names_file.close()
+
+
+## Using re.match
+searches the begening of the string the 'r' represent raw text
+
+	re.match(r'Love', data)
+
+## Using re.search
+searches the entire string 
+	
+	re.search(r'Love', data)
+
+## Sets 
+[aple] finds apple
+[a-z] finds all lowercase letters from a to z
+[^2]
+
+## re Finding emails in a Set
+
+	def find_emails(str):
+		return re.findall(r'[-\w\d+.]+@[-\w\d.]+', str)
+
+just like finding you can also ignore chars or sets here we ignore gov in emails
+using negative sets
+
+
+re.I is used to catch any case
+	re.findall(r'''
+	    \b@[-\w\d.]* # first a word boundy an @ and then any number of chars
+	    [^gov\t]+ # ignore instances of the letters 'g', 'o' and 'v'  and tab
+	    \b # match the word boundry again
+	    ''', data, re.VERBOSE|re.I) # verbose is used when multiple lines are used
+	    # The bar is used to add one or more flags 
+
+
