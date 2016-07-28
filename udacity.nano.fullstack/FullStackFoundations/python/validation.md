@@ -2,13 +2,13 @@ It is encouraged to validate all data that ther server accepts a dictionary is u
 
 For example,
 
-	```python
+	```
 	months = ['January', 'February', 'March', 'April', 'May', 'June',
           'July', 'August', 'September', 'October', 'November', 'December']
     ```
 
 	
-	```python
+	```
 	//Use a dictionary to validate the first three chars
 	month_abbvs = dict((m[:3].lower(), m) for m in months)
 	def valid_month(month):
@@ -17,7 +17,7 @@ For example,
      		return month_abbvs.get(short_month)
     ```
 
-	```python
+	```
 	// Here you have a date validation example
 	def valid_day(day):
 		if day and day.isdigit():
@@ -26,7 +26,7 @@ For example,
 				return day
 	```
 
-	```python
+	```
 	// Year validation
 	def valid_year(year):
 		if year and year.isdigit():
