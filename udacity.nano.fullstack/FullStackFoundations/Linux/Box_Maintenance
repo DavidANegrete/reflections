@@ -1,0 +1,28 @@
+# Updating a Linux Box
+
+
+The current packages on a box can be found in:
+
+	'/etc/apt/source.list'
+
+
+Package source lists in a Linux distro can be checked like so, as sudo:
+
+	'sudo apt-get update'
+
+	Note: this only checks that the disctros are flagged with the current 
+	updates available
+
+
+To push the update through:
+
+	'sudo apt-get upgrade'
+
+
+# Remove packages that are not needed
+
+	'sudo apt-get autoremove'
+
+
+
+
